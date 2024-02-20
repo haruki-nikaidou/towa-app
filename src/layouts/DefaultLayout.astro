@@ -1,0 +1,59 @@
+---
+import '../global.css'
+import Button from '../components/Button.tsx'
+import NavLink from "../components/NavLink.astro";
+---
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="description" content="A web3 backup tool."/>
+    <title>Towa - Remember the important things permanently</title>
+</head>
+<body>
+<header
+        class="border-b px-5 py-2 border-b-neutral-300 bg-neutral-100 bg-opacity-50 flex justify-between items-center gap-x-10 gap-y-2 flex-wrap sm:flex-nowrap"
+>
+        <h1 class="text-2xl inline-block order-1">
+            <a href="/" class="flex items-center gap-1">
+                <img src="/favicon.svg" alt="Towa Logo" class="h-9"/>
+                <span>
+                とわ
+            </span>
+            </a>
+        </h1>
+        <nav class="flex-1 order-3 sm:order-2 w-full sm:w-auto">
+            <ul class="inline-flex gap-10 justify-center sm:gap-6 sm:justify-start w-full smart-prime-a-list">
+                <li>
+                    <NavLink href="/create">
+                        Create
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink href="/edit">
+                        Edit
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink href="/query">
+                        Query
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink href="/">
+                        Help
+                    </NavLink>
+                </li>
+            </ul>
+        </nav>
+    <div class="order-2 sm:order-3">
+        <Button>
+            Connect Wallet
+        </Button>
+    </div>
+</header>
+<slot/>
+</body>
+</html>

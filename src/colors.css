@@ -1,0 +1,20 @@
+@tailwind components;
+
+:root {
+    --color-primary: #C64B6A;
+    --color-primary-flat: #F7D9E1;
+}
+
+@layer components {
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .bg-primary-flat {
+        background-color: var(--color-primary-flat);
+    }
+
+    .flat-button {
+        @apply h-full text-primary bg-primary-flat py-2 px-4 rounded-xl;
+    }
+}
