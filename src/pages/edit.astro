@@ -1,10 +1,43 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
+import TableSelect from "../components/TableSelect.tsx";
+import Search from "../components/Search";
+import RowPicker from "../components/RowPicker";
 ---
 
 <DefaultLayout>
-    <h1>Edit</h1>
-    <p>
-        Select a sheet to edit:
-    </p>
+    <main class="my-32 mx-auto max-w-2xl p-4 bg-neutral-100 bg-opacity-50 rounded-xl border border-neutral-300 space-y-2">
+        <h2 class="text-2xl font-bold">Edit Table</h2>
+        <p class="text-neutral-600 text-sm">
+            Because decrypting is hard, you can not see the value of the table before you decide to edit a certain row.
+        </p>
+        <p class="text-neutral-600 text-sm">
+            The key of each rows are not encrypted.
+        </p>
+        <h3 class="text-lg">
+            Select a table to edit
+        </h3>
+        <p class="text-neutral-600 text-sm">
+            You have the ownership of the following tables:
+        </p>
+        <TableSelect
+            items={[
+                {
+                    name: "Table 1",
+                },
+                {
+                    name: "Table 2",
+                },
+                {
+                    name: "Table 3",
+                },
+            ]}
+            selected={1}
+        />
+        <h3 class="text-lg">
+            Edit a row
+        </h3>
+        <Search/>
+        <RowPicker rows={["key1","key2", "key3"]}/>
+    </main>
 </DefaultLayout>
