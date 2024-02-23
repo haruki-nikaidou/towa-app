@@ -1,10 +1,10 @@
 ---
-
 import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Search from "../components/Search";
 ---
 <DefaultLayout>
-    <h1>Query</h1>
-    <p>
-        Input the wallet address or domain name to query the data.
-    </p>
+    <main class="my-32 mx-auto max-w-2xl p-4 bg-neutral-100 bg-opacity-50 rounded-xl border border-neutral-300 space-y-4">
+        <h2 class="text-2xl font-bold">Query</h2>
+        <Search placeholder="Input Domain or Wallet Address" />
+    </main>
 </DefaultLayout>

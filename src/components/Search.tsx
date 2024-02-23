@@ -2,6 +2,7 @@ import {createSignal} from "solid-js";
 
 export interface SearchProps {
     onSearch?: (value: string) => void;
+    placeholder?: string;
 }
 
 export default function Search(props: SearchProps) {
@@ -11,6 +12,7 @@ export default function Search(props: SearchProps) {
             <input
                 type="text"
                 value={search()}
+                placeholder={props.placeholder}
                 class="py-2 px-4 rounded-l-full h-full flex-1 block outline-0 bg-none"
                 onInput={(e) => {setSearch(e.currentTarget.value)}}
             />
